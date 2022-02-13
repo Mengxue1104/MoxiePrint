@@ -55,7 +55,7 @@ export default function Store() {
             console.log(imagePreview)
             const updates = {};
             updates['/product/' + product.key] = postData;
-            //update(ref(db), updates);
+            update(ref(db), updates);
         }
         else {
             const itemRef = await push(dataRef)
@@ -98,7 +98,7 @@ export default function Store() {
         }
     }
 
-    //image
+    //image`
     const onImageSelected = async (e) => {
         let upload = e.target.files[0]
 
@@ -108,7 +108,7 @@ export default function Store() {
 
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [imagePreview])
 
     return (
         <Container fluid>

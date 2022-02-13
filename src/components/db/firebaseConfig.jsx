@@ -6,13 +6,13 @@ import {getDatabase} from 'firebase/database';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC6YvZAGf5DYMkTkUvyQy99zMAfQ9d3NFQ",
-  authDomain: "moxieprint-2008.firebaseapp.com",
-  databaseURL: "https://moxieprint-2008-default-rtdb.firebaseio.com",
-  projectId: "moxieprint-2008",
-  storageBucket: "moxieprint-2008.appspot.com",
-  messagingSenderId: "809152565258",
-  appId: "1:809152565258:web:bbcb0f121ad952313a4ff3"
+  apiKey: "Process.env.STOREFRONT_FIREBASE_API_KEY",
+  authDomain: "Process.env.STOREFRONT_FIREBASE_AUTH_DOMAIN",
+  databaseURL: "Process.env.STOREFRONT_FIREBASE_DATABASE_URL",
+  projectId: "Process.env.STOREFRONT_FIREBASE_PROJECT_ID",
+  storageBucket: "Process.env.STOREFRONT_FIREBASE_STORAGE_BUCKET",
+  messagingSenderId: "Process.env.STOREFRONT_FIREBASE_MESSAGING_SENDER_ID",
+  appId: "Process.env.Process.env.STOREFRONT_FIREBASE_APP_ID"
 };
 
 // Initialize Firebase
