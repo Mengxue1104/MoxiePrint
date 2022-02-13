@@ -49,10 +49,9 @@ export default function Store() {
                 sku: product.sku,
                 title: product.title,
                 custom: product.custom,
-                image: urlPath === "" ? imagePreview : urlPath,
+                image: file.name === undefined ? product.image : urlPath,
                 price: product.price
             }
-            console.log(imagePreview)
             const updates = {};
             updates['/product/' + product.key] = postData;
             update(ref(db), updates);
@@ -73,6 +72,7 @@ export default function Store() {
         fetchData()
 
         setShowModal(false)
+        setFile("")
     }
 
     //updata data
