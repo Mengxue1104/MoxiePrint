@@ -11,6 +11,7 @@ export default function Store() {
     const [imagePreview, setImagePreview] = useState("")
     const [file, setFile] = useState("")
 
+    //get data
     const fetchData = async () => {
         const product = ref(db, '/product')
         const productSnapShot = await get(product)
@@ -22,6 +23,14 @@ export default function Store() {
         setProductList(products)
     }
 
+    //init data
+    const initData = () => {
+        setProduct([])
+        setImagePreview("")
+        setShowModal(true)
+    }
+
+    //save data
     const handleSave = async () => {
         const dataRef = ref(db, 'product');
         let urlPath = ""
@@ -43,10 +52,10 @@ export default function Store() {
                 image: urlPath === "" ? imagePreview : urlPath,
                 price: product.price
             }
-
+            console.log(imagePreview)
             const updates = {};
             updates['/product/' + product.key] = postData;
-            update(ref(db), updates);
+            //update(ref(db), updates);
         }
         else {
             const itemRef = await push(dataRef)
@@ -66,10 +75,11 @@ export default function Store() {
         setShowModal(false)
     }
 
+    //updata data
     const handleChange = async (e) => {
         setProduct({ ...product, [e.target.name]: e.target.value });
     }
-
+    //edit button
     const handleEdit = async (key) => {
         let temp = productList.filter(p => p.key === key)[0]
 
@@ -78,6 +88,7 @@ export default function Store() {
         setShowModal(true)
     }
 
+    //delete button
     const handleDelete = async (key) => {
         if (window.confirm("Are you sure to delete this item?")) {
             const updates = {};
@@ -87,6 +98,7 @@ export default function Store() {
         }
     }
 
+    //image
     const onImageSelected = async (e) => {
         let upload = e.target.files[0]
 
@@ -102,7 +114,7 @@ export default function Store() {
         <Container fluid>
             <Row>
                 <Col sm={1}>
-                    <Button variant="outline-primary mb-3" onClick={() => setShowModal(true)}>Add Product</Button>
+                    <Button variant="outline-primary mb-3" onClick={() => initData()}>Add Product</Button>
                 </Col>
                 <Col>
                     <Container>
