@@ -7,12 +7,12 @@ export default function Header() {
       <Container>
         <Navbar.Brand href="#home">
           <img
-            height={30}
+            height={30} alt="moxieprintlogo"
             src="/moxieprintlogo.png"
           />{'Moxie Print'}
         </Navbar.Brand>  
         <Navbar.Brand href="#setting">
-          <img
+          <img alt="setting"
             height={30}
             src="/login.png"
           />{'Login'}

@@ -123,7 +123,7 @@ export default function Store() {
                                 if (p.key) {
                                     return <Col sm={3} key={k} className="mb-3">
                                         <Card style={{ width: '18rem' }}>
-                                            <Card.Img variant="top" src={p.image} />
+                                            <Card.Img variant="top" src={p.image} alt="product img" />
                                             <Card.Body>
                                                 <Card.Title>{p.title}</Card.Title>
                                                 <Card.Text>
@@ -138,6 +138,8 @@ export default function Store() {
                                         </Card>
                                     </Col>
                                 }
+
+                                return
                             })}
                         </Row>
                     </Container>
