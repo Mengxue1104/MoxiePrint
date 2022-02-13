@@ -1,0 +1,12 @@
+.img-preview {
+    max-width: 100%;
+}
+
+.control {
+    position: absolute;
+    right: 1px;
+}
+
+.ml-3 {
+    margin-left: 3px;
+}
