@@ -120,7 +120,7 @@ export default function Store() {
                                                 </Card.Text>
                                             </Card.Body>
                                             <div className='control'>
-                                                <Button variant="outline-primary" onClick={() => handleEdit(p.key)}>Edit</Button>
+                                                <Button variant="outline-dark" onClick={() => handleEdit(p.key)}>Edit</Button>
                                                 <Button variant="outline-danger" className="ml-3" onClick={() => handleDelete(p.key)}>Del</Button>
                                             </div>
                                         </Card>
