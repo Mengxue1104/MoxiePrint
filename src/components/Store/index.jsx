@@ -98,7 +98,7 @@ export default function Store() {
         }
     }
 
-    //image`
+    //image
     const onImageSelected = async (e) => {
         let upload = e.target.files[0]
 
