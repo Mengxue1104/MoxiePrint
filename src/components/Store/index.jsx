@@ -113,9 +113,12 @@ export default function Store() {
     return (
         <Container fluid>
             <Row>
+                {/* sidebar */}
                 <Col sm={1}>
                     <Button variant="outline-primary mb-3" onClick={() => initData()}>Add Product</Button>
                 </Col>
+
+                {/* widget display area */}
                 <Col>
                     <Container>
                         <Row>
