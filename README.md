@@ -7,7 +7,7 @@ Fllow the instructions of 2008 Practical 1 -Firebase Dashboard Due February 13th
 
 # Moxie Print
 ## General
-Moxie Print dashboard page contains an app-bar, sidebar and widget display area. 
+ This is the dashboard of Moxie Print, a store of Stationery. It contains an app-bar, sidebar and widget display area. 
 
 ## Data
 Use the Firebase Real Time Database to save all the data of storefront. Thera are four data points and two requird data.
